@@ -134,7 +134,7 @@ export default function DiseasePrediction() {
       formData.append("file", blob, "skin_image.jpg");
       
       // Send to FastAPI backend
-      const apiResponse = await fetch("http://localhost:8000/predict", {
+      const apiResponse = await fetch("http://3.95.37.195:8000", {
         method: "POST",
         body: formData,
       });
