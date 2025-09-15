@@ -138,6 +138,9 @@ export default function DiseasePrediction() {
             // Send to FastAPI backend
             const apiResponse = await fetch(`${API_BASE}/predict`, {
                 method: "POST",
+                headers: {
+          "Content-Type": "application/json",
+                        },
                 body: formData,
             });
 
